@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_for循环</title>
+</head>
+
+<body>
+    <script>
+        // for (变量起始值; 终止条件; 变量变化量) {
+        // 循环体
+        // }
+        // for (let i = 1; i <= 3; i++) {
+        //     document.write(`拿下拿下！<br>`)
+        // }
+        // 退出循环
+        // for (let i = 1; i <= 5; i++) {
+        //     if (i == 3) {
+        //         continue// 跳出本次循环,继续下一次循环
+        //     }
+        //     console.log(i)
+        //     document.write(i)
+        // }
+        for (let i = 1; i <= 5; i++) {
+            if (i === 3) {
+                break// 跳出整个循环
+            }
+            console.log(i)
+            document.write(i)
+        }
+        // 无限循环
+        // for (; ;) {
+        //     console.log('hello world')
+        // }
+    </script>
+</body>
+
+</html>

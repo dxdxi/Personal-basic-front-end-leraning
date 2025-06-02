@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_数组的操作</title>
+</head>
+
+<body>
+    <script>
+        // let arr = []
+        // console.log(arr)
+        // console.log(arr[0]) //undefined
+        // arr[0] = 1
+        // arr[1] = 5
+        // console.log(arr)
+        let arr = ['pink', 'red', 'green']
+        // 1.修改
+        // arr[0] = 'yellow'
+        // 给所有的数组元素后面加个teacher 修改
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] + ` ` + 'teacher'
+        }
+        console.log(arr)
+        // 2.增加
+        arr.push('blue') //在数组最后增加一个元素
+        console.log(arr)
+        // console.log(arr.push('blue'))
+        arr.unshift('orange') //在数组最前面增加一个元素
+        console.log(arr)
+        // console.log(arr.unshift('orange'))
+        // 3.删除
+        arr.pop() //删除数组最后一个元素
+        // console.log(arr.pop())
+        console.log(arr)
+        arr.shift() //删除数组最前面的元素
+        // console.log(arr.shift())
+        console.log(arr)
+        arr.splice(1, 1) //从索引 1 开始删除 1 个元素
+        console.log(arr)
+    </script>
+</body>
+
+</html>

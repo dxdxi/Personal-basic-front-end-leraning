@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42_histroy对象</title>
+</head>
+<button>后退</button>
+<button>前进</button>
+
+<body>
+    <script>
+        // history 对象，主要管理历史记录,与浏览器的操作相对应
+        console.log(history);
+        const back = document.querySelector('button:first-child');
+        const forward = back.nextElementSibling;
+        // 后退
+        back.addEventListener('click', function () {
+            // history.back();
+            history.go(-1);
+        });
+        // 前进
+        forward.addEventListener('click', function () {
+            // history.forward();
+            history.go(1);
+        });
+    </script>
+</body>
+
+</html>

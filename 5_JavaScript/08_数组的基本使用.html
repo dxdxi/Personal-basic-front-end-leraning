@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_数组的基本使用</title>
+</head>
+
+<body>
+    <script>
+        //1.声明数组
+        let arr = ['伊内丝', '史尔特尔', '温蒂', '阿斯卡伦', '桑葚']
+        //2.使用数组
+        console.log(arr[0])
+
+        //数组取值案例
+        let days = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']
+        console.log(days[6]);
+        // 数组求和
+        let arr1 = [2, 6, 1, 7, 4]
+        let sum = 0
+        for (let i = 0; i < arr1.length; i++) {
+            sum += arr1[i]
+        }
+        console.log(sum)
+        // 平均值
+        console.log(sum / arr1.length)
+    </script>
+</body>
+
+</html>

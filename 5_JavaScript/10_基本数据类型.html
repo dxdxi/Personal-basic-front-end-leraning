@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_基本数据类型</title>
+</head>
+
+<body>
+    <script>
+        //JS 弱数据类型,即只有当我们赋值了，才知道是什么类型
+        //数字类型
+        let a = 1
+        console.log(2 % 5 + 4 * 2)
+        //字符串类型
+        let tel = '15387978540'
+        console.log(tel)
+        //字符串拼接
+        console.log('我的电话是' + tel)
+        let age = 18
+        console.log('我今年' + age + '岁')
+        //模板字符串，用反引号``
+        document.write(`我今年${age}岁了`)
+        //布尔类型 布尔型字面量：true、false
+        let isCool = true
+        console.log(isCool)
+        //未定义类型 未赋值
+        let num
+        console.log(num)
+        //null(空类型) 赋值了，但内容为空
+        let obj = null
+        console.log(obj);
+    </script>
+</body>
+
+</html>

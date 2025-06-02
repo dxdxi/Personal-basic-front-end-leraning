@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31_事件监听</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+        // 1.语法：元素对象.addEventListener('事件类型',要执行的函数)
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function () {
+            console.log('按钮被点击')
+        })
+    </script>
+</body>
+
+</html>

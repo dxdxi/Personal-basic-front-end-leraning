@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36_其他事件</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 500px auto 0;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+    </style>
+    <script>
+        // 1.页面加载事件
+        // 给window加，等待页面所有资源加载完毕，就回去执行回调函数
+        // window.addEventListener("load",function() {
+        //     const btn = document.querySelector("button");
+        //     btn.addEventListener("click", function () {
+        //         alert(11);
+        //     });
+        // });
+
+        // 给document加，无需等待样式表、图像等完全加载
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.querySelector("button");
+            btn.addEventListener("click", function () {
+                alert(11);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>点击</button>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, consequuntur impedit dolore nihil natus unde
+        non iure atque a commodi sint quam quia praesentium aut nisi repudiandae facere eius id mollitia inventore
+        tempore molestias ad! Corporis voluptatibus dicta est perferendis. Magnam architecto alias dignissimos quisquam
+        eos quod, doloribus, cupiditate esse qui cumque quas omnis sit iure iusto debitis saepe possimus animi autem
+        quasi! In voluptatem perspiciatis provident, reiciendis maxime, iure quia cumque earum quis autem sit. Labore
+        cumque inventore perspiciatis. Vitae dolores corrupti, consequatur non qui in ut repellat facere id vero
+        consectetur nostrum deserunt tempora ipsam unde voluptatum magnam laboriosam sequi, accusamus neque corporis
+        itaque aut alias. Mollitia excepturi expedita corporis accusantium repellendus cumque consectetur optio. Aliquam
+        quae numquam animi! Animi laboriosam facere vero cum accusantium dolorum molestias! Eveniet explicabo molestias,
+        itaque aperiam exercitationem nam, consequatur eum quod ab officiis optio? Praesentium dolorum, fuga aliquid
+        reiciendis expedita aliquam, assumenda ratione nobis eaque obcaecati commodi corrupti esse. Repellendus
+        provident minima ipsam totam veritatis facere, sint ipsum. Molestias placeat reiciendis deleniti rerum,
+        molestiae error excepturi a ipsum alias voluptates eos aspernatur nostrum, veritatis tempore perferendis
+        suscipit hic officia, quaerat repellendus labore. Eveniet eos quam omnis eius dolorem id molestiae alias quidem
+        minima unde numquam facilis distinctio adipisci est culpa explicabo cum, ea recusandae atque nihil sit at
+        reiciendis? Assumenda quisquam perspiciatis dolore aspernatur, voluptate nostrum reprehenderit dolorum ipsa
+        quidem debitis porro quasi inventore quis a eum dicta alias adipisci, dolorem, expedita laudantium tempore
+        ratione harum dignissimos? Nesciunt culpa in esse molestiae?</div>
+    <script>
+        // 2.页面滚动事件
+        // window.addEventListener("scroll", function () {
+        //     // console.log("我滚了")
+        //     // 获取html元素的写法
+        //     // document.documentElement
+        //     // console.log(document.documentElement.scrollTop);
+        //     const n = document.documentElement.scrollTop;
+        //     if (n >= 100) {
+        //         div.style.display = "block";
+        //     } else {
+        //         div.style.display = "none";
+        //     }
+        // });
+
+        const div = document.querySelector("div");
+        // div.addEventListener("scroll", function () {
+        //     console.log(div.scrollTop);
+        // });
+
+
+        // resize 浏览器窗口大小发生变化的时候触发的事件
+        console.log(div.clientWidth);
+        window.addEventListener("resize", function () {
+            console.log(1);
+        });
+    </script>
+</body>
+
+</html>

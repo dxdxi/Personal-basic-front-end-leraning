@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>56_内置构造函数</title>
+</head>
+
+<body>
+    <script>
+        // 基本包装类型
+        // js 底层完成，把简单数据类型包装为了引用数据类型
+        // const str = new String('knight');
+        const str = "knight";
+        // 内置构造函数
+        // 引用类型：Object，Array，RegExp，Date等
+        // 1. Object静态方法
+        const o = { uname: "kinght", age: 21 };
+        console.log(Object.keys(o)); // 获得所有的属性名 返回数组
+        console.log(Object.values(o)); // 获取所有的属性值 返回数组
+        const oo = {};
+        Object.assign(oo, o); // 拷贝对象 将 o 拷贝给 oo
+        Object.assign(o, { gender: "man" }); // 给对象添加属性
+        console.log(o);
+        // 包装类型：String，Number，Boolean等
+
+        // 2. 数组常见实例方法
+        // 遍历forEach(),过滤filter(),迭代map(),累积器reduce()
+        // reduce()
+        // 没有初始值
+        const arr = [1, 5, 8];
+        const total = arr.reduce(function (prev, current) {
+            return prev + current;
+        });
+        console.log(total);
+        // 有初始值
+        const sum = arr.reduce(function (prev, current) {
+            return prev + current;
+        }, 10);
+        console.log(sum);
+    </script>
+</body>
+
+</html>

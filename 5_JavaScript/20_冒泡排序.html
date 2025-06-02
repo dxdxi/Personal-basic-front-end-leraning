@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20_冒泡排序</title>
+</head>
+
+<body>
+    <script>
+        let arr = [3, 1, 4, 5, 2]
+        // for (let i = 0; i < arr.length; i++) {
+        //     for (let j = 0; j < arr.length - 1 - i; j++) {
+        //         //开始交换
+        //         if (arr[j] > arr[j + 1]) {
+        //             let temp = arr[j]
+        //             arr[j] = arr[j + 1]
+        //             arr[j + 1] = temp
+        //         }
+        //     }
+        // }
+        // arr.sort() // 排序
+        // sort 升序排序
+        arr.sort(function (a, b) {
+            return a - b
+        })
+        // sort 降序排序
+        arr.sort(function (a, b) {
+            return b - a
+        })
+        console.log(arr)
+    </script>
+</body>
+
+</html>

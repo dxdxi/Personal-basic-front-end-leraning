@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26_获取DOM元素</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">123</div>
+    <div class="box">abc</div>
+    <p id="nav">导航栏</p>
+    <ul>
+        <li>测试</li>
+        <li>测试</li>
+        <li>测试</li>
+        <li>测试</li>
+    </ul>
+    <script>
+        // 1.获取匹配的第一个元素
+        // const box = document.querySelector('div')
+        const box = document.querySelector('.box')
+        console.log(box)
+        const nav = document.querySelector('#nav')
+        console.log(nav)
+        // 1. 1.操作修改
+        nav.style.color = 'red'
+        // 2.获取ul中第一个li
+        const li = document.querySelector('ul li:first-child')
+        console.log(li)
+
+        // 3.选择所有的li
+        const li1 = document.querySelectorAll('ul li')
+        console.log(li1)
+
+        // 4.根据id获取一个元素
+        const p1 = document.getElementById('nav')
+        console.log(p1)
+        // 5.根据标签获取一类元素 获取页面所有的div元素
+        const div = document.getElementsByTagName('div')
+        console.log(div)
+        // 6.根据类名获取元素 获取页面所有类名为box的元素
+        const box1 = document.getElementsByClassName('box')
+        console.log(box1)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_let_or_const</title>
+</head>
+
+<body>
+    <script>
+        // 以下let均可替换为const
+        let arr = [1, 2, 3]
+        arr.push = 4
+        let person = {
+            uname: '魔王',
+            age: '?',
+            gender: '女'
+        }
+        person.address = '?'
+        person.age = '18'
+        console.log(person)
+
+        // 但以下不行
+        let num = []
+        num = [1, 2, 3]
+    </script>
+</body>
+
+</html>

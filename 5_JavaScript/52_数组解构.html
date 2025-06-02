@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52_数组解构</title>
+</head>
+
+<body>
+    <script>
+        const arr = [100, 60, 80]
+        // 数组解构
+        const [max, min, avg] = arr;
+        console.log(max);
+        console.log(min);
+        console.log(avg);
+
+        // 交换变量的值
+        let a = 1;
+        let b = 2;
+        [b, a] = [a, b];
+        console.log(a, b);
+
+        const [c, d, e, f, f_a = 0] = [1, 2, 3];
+        console.log(c); // 1
+        console.log(d); // 2
+        console.log(e); // 3
+        // 防止有undefined传递单元值的情况，可以设置默认值
+        console.log(f); // undefined
+        console.log(f_a); // 0
+
+        const [g, j, ...k] = [1, 2, 3, 4];
+        console.log(g); // 1
+        console.log(j); // 2
+        console.log(c); // [3,4]
+
+        // 多维数组的解构
+        const [l, m, [n, o]] = [1, 2, [3, 4]];
+        console.log(l); // 1
+        console.log(m); // 2
+        console.log(n); // 3
+        console.log(o); // 4
+    </script>
+</body>
+
+</html>

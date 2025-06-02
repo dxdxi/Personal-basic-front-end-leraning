@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50_函数剩余参数</title>
+</head>
+
+<body>
+    <script>
+        // 剩余参数 真数组
+        function getSum(...arr) {
+            console.log(arr);
+        }
+        getSum(2, 3);
+        getSum(1, 2, 3);
+
+        const arr = [1, 2, 3];
+        // 展开运算符 可以展开数组
+        console.log(...arr);
+        console.log(Math.max(...arr));
+    </script>
+</body>
+
+</html>

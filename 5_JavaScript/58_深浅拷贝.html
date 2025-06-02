@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58_深浅拷贝</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            uname: "kinght",
+            age: 18,
+            weapon: {
+                remote: "Gatling",
+                fighting: "electric saw"
+            },
+            hobby: ["run", "fight"]
+        }
+        // 浅拷贝
+        // const o = { ...obj }
+        // console.log(o)
+        // o.age = 20
+        // console.log(o)
+        // console.log(obj)
+
+        // const o = {}
+        // Object.assign(o, obj)
+        // o.age = 20
+        // o.weapon.remote = "bow"
+        // console.log(o)
+        // console.log(obj)
+
+        // 深拷贝
+        // 拷贝函数
+        // function deepCopy(newObj, oldObj) {
+        //     for (let k in oldObj) {
+        //         // 处理数组类型
+        //         if (oldObj[k] instanceof Array) {
+        //             newObj[k] = []
+        //             deepCopy(newObj[k], oldObj[k])
+        //         } else {
+        //             // 属性名 k  值 oldObj[k]
+        //             newObj[k] = oldObj[k]
+        //         }
+        //     }
+        // }
+        // deepCopy(o, obj)
+        // o.age = 20
+        // o.hobby[0] = "do"
+        // console.log(o)
+        // console.log(obj)
+
+        // lodash实现深拷贝
+
+        // 利用JSON实现深拷贝
+        const o = JSON.parse(JSON.stringify(obj))
+        o.age = 20
+        o.hobby[0] = "do"
+        console.log(o)
+        console.log(obj)
+    </script>
+</body>
+
+</html>

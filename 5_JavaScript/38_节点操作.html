@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38_节点操作</title>
+    <style>
+        .dad {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .baby {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dad">
+        <div class="baby"></div>
+    </div>
+    <ul>
+        <li>
+            <p>第一个段落</p>
+        </li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        const baby = document.querySelector(".baby");
+        console.log(baby);  //  返回dom对象
+        // 父节点
+        console.log(baby.parentNode);  //  返回dom对象
+
+        const ul = document.querySelector("ul");
+        console.log(ul.children);  // 返回伪数组，选择的是亲儿子
+        const li2 = document.querySelector("ul li:nth-child(2)");
+        console.log(li2.previousElementSibling);  // 上一个兄弟元素
+        console.log(li2.nextElementSibling);  //  下一个兄弟元素
+
+        // 创建节点
+        const div = document.createElement("div");
+        const h2 = document.createElement("h2");
+        console.log(div);
+        // 插入节点  作为最后一个子元素
+        document.body.appendChild(div);
+        div.innerHTML = "Last Child";
+        // 插入节点  放在指定元素前面
+        ul.insertBefore(h2, ul.children[0]);
+        h2.innerHTML = "First Child";
+
+        // 克隆节点  true包含后代节点，false不包含后代节点，默认为flase
+        // const li3 = ul.children[3].cloneNode(true);
+        // console.log(li3);
+        // 插入节点
+        ul.append(ul.children[3].cloneNode(true));
+
+        // 删除节点  要删除元素必须通过父元素删除
+        const dad = document.querySelector(".dad");
+        dad.removeChild(baby);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28_修改表单属性</title>
+</head>
+
+<body>
+    <input type="text" name="" id="" value="电脑">
+    <input type="checkbox" name="" id="">
+    <script>
+        // 1.获取元素
+        const uname = document.querySelector('input')
+        // 2.获取表单里的值 表单.value
+        console.log(uname.value)
+        console.log(uname.innerHTML) // innerHTML 获取不到表单的内容
+        // 3.设置表单的值
+        uname.type = 'paddword'
+
+        // 1.获取元素
+        const input = document.querySelector('input[type="checkbox"]')
+        // 2.添加属性值（eg-checked，disabled，selected）
+        input.checked = true //'true'也行，但不提倡（内涵隐式转换）
+    </script>
+</body>
+
+</html>

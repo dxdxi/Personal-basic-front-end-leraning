@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43_localStorage存储</title>
+</head>
+
+<body>
+    <script>
+        // 本地存储  只能储存字符串数据类型
+        // localStorage.setItem(键,值)  存,改
+        localStorage.setItem('uname', 'knight');
+        // localStorage.getItem(键)  取
+        console.log(localStorage.getItem('uname'));
+        // localStorage.removeItem(键)  删
+        localStorage.removeItem('uname');
+
+        const obj = {
+            uname: 'knight',
+            age: 18,
+            gender: 'woman'
+        }
+        // 存储 复杂数据类型,无法直接使用
+        localStorage.setItem('obj', obj);
+        // 取
+        console.log(localStorage.getItem('obj'));
+        // 复杂数据类型存储必须转换为 JSON字符串存储
+        localStorage.setItem('obj', JSON.stringify(obj)); // JSON 对象 属性和值有引号，而且统一为双引号
+        console.log(localStorage.getItem('obj'));
+        // 把JSON 对象转换为 对象
+        console.log(JSON.parse(localStorage.getItem('obj')));
+
+        const arr = [1, 2, 3, 4, 5];
+        localStorage.setItem('arr', arr);
+        console.log(arr);
+        console.log(localStorage.getItem('arr'));
+        const Arr = ['one', 'two', 'three'];
+        localStorage.setItem('Arr', Arr);
+        console.log(Arr);
+        console.log(localStorage.getItem('Arr'));
+    </script>
+</body>
+
+</html>

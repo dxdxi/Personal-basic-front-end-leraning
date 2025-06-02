@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44_数组的map方法和join方法</title>
+</head>
+
+<body>
+    <script>
+        const arr = ['red', 'blue', 'green'];
+
+        // 1. 数组map方法
+        const newArr = arr.map(function (ele, index) {
+            // console.log(ele); // 数组元素
+            // console.log(index); // 索引号
+            return ele + '颜色';
+        });
+        console.log(newArr);
+        // 2. 数组join方法
+        console.log(newArr.join('')); // 默认分隔符为 ,
+    </script>
+</body>
+
+</html>

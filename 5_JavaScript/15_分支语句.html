@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15_分支语句</title>
+</head>
+
+<body>
+    <script>
+        // 1.if 语句
+        //单分支语句
+        //除了0，-0，null，false，NaN，undefined，空字符串，其余都是true
+        if (true) {
+            console.log('执行语句')
+        }
+        //双分支语句
+        if (true) {
+            console.log('执行语句')
+        } else {
+            console.log('执行语句2')
+        }
+        //多分支语句
+        if (true) {
+            console.log('执行语句')
+        } else if (true) {
+            console.log('执行语句2')
+        } else {
+            console.log('执行语句3')
+        }
+        // 2.三元运算符
+        //条件为真时，返回冒号前的值，条件为假时，返回冒号后的值
+        let a = 1;
+        let b = 2;
+        let c = a > b ? a : b;
+        console.log(c)
+        // 3.switch语句
+        switch (数据) {
+            case 值1:
+                console.log('执行语句')
+                break;//break是跳出switch语句，不写break会继续执行下一个case
+            case 值2:
+                console.log('执行语句2')
+                break;
+            default:
+                console.log('执行语句3')
+                break;
+        }
+    </script>
+</body>
+
+</html>

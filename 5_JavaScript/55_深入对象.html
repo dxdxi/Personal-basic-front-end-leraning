@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>55_深入对象</title>
+</head>
+
+<body>
+    <script>
+        // 1. 创建对象的三种方式
+        // 利用对象字面量创建对象
+        // 利用 new Object 创建对象
+        const obj = new Object({ age: 21 });
+        console.log(obj);
+        obj.uname = "knight";
+        // 利用构造函数创建对象
+        function Obj(uname, age, gender) {
+            this.uname = uname;
+            this.age = age;
+            this.gender = gender;
+        }
+        const Kinght = new Obj("knight", 21, "man");
+        console.log(Kinght);
+    </script>
+</body>
+
+</html>

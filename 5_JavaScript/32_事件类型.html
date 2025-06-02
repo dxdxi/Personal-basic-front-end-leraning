@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32_事件类型</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <input type="text" name="" id="">
+    <script>
+        const box = document.querySelector('.box')
+        // 1.鼠标事件
+        box.addEventListener('click', function () {
+            box.backgroundColor = black
+        }) // 鼠标点击
+        box.addEventListener('mouseenter', function () {
+            console.log('鼠标经过类名为box的div标签')
+        })
+        box.addEventListener('mouseleave', function () {
+            console.log('鼠标离开类名为box的div标签')
+        })
+        // 2.焦点事件
+        const input = document.querySelector('input')
+        input.addEventListener('focus', function () {
+            console.log('有焦点触发')
+        })
+        input.addEventListener('blur', function () {
+            console.log('失去焦点触发')
+        })
+        // 3.键盘事件
+        input.addEventListener('keydown', function () {
+            console.log('键盘按下了')
+        })
+        input.addEventListener('keyup', function () {
+            console.log('键盘弹起了')
+        })
+        // 4.用户输入文本事件
+        input.addEventListener('input', function () {
+            console.log(input.value)
+        })
+    </script>
+</body>
+
+</html>

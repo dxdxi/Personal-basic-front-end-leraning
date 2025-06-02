@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30_定时器</title>
+</head>
+
+<body>
+    <script>
+        // setInterval(函数,间隔时间) 间隔时间单位ms
+        // setInterval(function () {
+        //     console.log('一秒执行一次')
+        // }, 1000)
+        function print() {
+            console.log('一秒执行一次')
+        }
+        let n = setInterval(print, 1000)
+        console.log(n)
+        // 关闭定时器
+        clearInterval(n)
+    </script>
+</body>
+
+</html>

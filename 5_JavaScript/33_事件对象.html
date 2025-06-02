@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33_事件对象</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <input type="text" name="" id="">
+    <form action="http://www.baidu.com">
+        <input type="submit" value="免费注册">
+    </form>
+    <script>
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function (e) {
+            console.log(e)
+        })
+        const input = document.querySelector('input')
+        input.addEventListener('keyup', function (evt) {
+            // console.log(evt)
+            if (evt.key === 'Enter') {
+                console.log('我按下了回车键')
+            }
+        })
+
+        // trim方法 去除字符串左右两侧的空格
+        const str = '         hello world!    '
+        console.log(str.trim())
+
+
+        // 阻止默认行为
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

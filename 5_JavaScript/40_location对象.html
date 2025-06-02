@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40_location对象</title>
+    <style>
+        body {
+            height: 100vh;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100vh;
+            color: black;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.baidu.com/">网页将在<span>5</span>秒钟后跳转</a>
+    <button>刷新</button>
+    <script>
+        // console.log(location);
+        // console.log(location.href);
+        // 1.获取元素
+        const a = document.querySelector('a');
+        // 2.开启定时器
+        // 3.声明倒计时变量
+        let num = 5;
+        let timeId = setInterval(function () {
+            num--;
+            a.innerHTML = `网页将在<span>${num}</span>秒钟后跳转`;
+            if (num === 0) {
+                clearInterval(timeId);
+                // 跳转网页
+                location.href = 'https://www.baidu.com/';
+            }
+        }, 1000);
+
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', () => {
+            // f5 刷新页面
+            location.reload();
+            // ctrl + f5 强制刷新
+            location.reload(true);
+        })
+    </script>
+</body>
+
+</html>

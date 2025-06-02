@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53_对象解构</title>
+</head>
+
+<body>
+    <script>
+        const uname = 'princess';
+        // const obj = {
+        //     uname: 'kinght',
+        //     age: 21
+        // };
+        // 基本解构语法
+        // 对象解构的变量名可以重新改名 旧变量名:新变量名
+        const { uname: userName, age } = { uname: 'kinght', age: 21 };
+        // 等价于const uname = obj.uname;
+        console.log(userName);
+        console.log(age);
+
+        // 解构数组对象
+        const pig = [
+            {
+                uname: '佩奇',
+                age: 18
+            }
+        ];
+        const [{ uname: pigName, age: pigAge }] = pig;
+        console.log(pigName);
+        console.log(pigAge);
+
+        // 多级对象解构
+        const pig_brother = {
+            name: '乔治',
+            family: {
+                mother: '猪妈妈',
+                father: '猪爸爸',
+                sister: '佩奇'
+            },
+            age: 6
+        };
+        const { name, family: { mother, father, sister } } = pig_brother;
+        console.log(name);
+        console.log(mother);
+        console.log(father);
+        console.log(sister);
+    </script>
+</body>
+
+</html>

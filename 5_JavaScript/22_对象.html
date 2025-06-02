@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_对象</title>
+</head>
+
+<body>
+    <script>
+        //对象
+        //对象是属性的无序集合，每个属性都有一个名字和值，属性名和值之间用冒号分隔，属性之间用逗号分隔
+
+        //声明语法
+        // let 对象名 = {
+        //     属性名: 属性值,
+        //     方法名: 函数
+        // }
+        let mowang = {
+            sheName: '魔王',
+            age: '?',
+            gender: '女'
+        }
+
+        //对象使用（查，改，增，删）
+        // 1.查 对象名.属性名 或 对象名['属性名']
+        console.log(mowang.sheName)
+        console.log(mowang['age'])
+        // 2.改 对象名.属性名 = 新值
+        mowang.age = 18
+        console.log(mowang.age)
+        // 3.增 对象名.新属性名 = 新值
+        mowang.height = '?'
+        console.log(mowang)
+        // 4.删 delete 对象名.属性名
+        delete mowang.age
+        console.log(mowang)
+
+        //对象中的方法
+        let obj = {
+            uname: 'TC',
+            //方法名: 函数
+            song: function () {
+                console.log('熄灭')
+            }
+        }
+        //调用方法 对象名.方法名()
+        obj.song()
+
+        //遍历对象
+        let arr = [1, 2, 3, 4, 5]
+        for (let k in arr) {
+            console.log(k) //输出索引号 0 1 2 3 4，是字符串类型
+            console.log(arr[k]) //输出数组元素 1 2 3 4 5
+        }
+        for (let k in mowang) {
+            console.log(k) //输出属性名 sname age gender
+            console.log(mowang[k]) //输出属性值 魔王 ? 女
+        }
+
+        // 内置对象 Math
+        console.log(Math.PI) //圆周率;
+        console.log(Math.max(1, 2, 3, 4, 5)) //最大值
+        console.log(Math.min(1, 2, 3, 4, 5)) //最小值
+        console.log(Math.abs(-1)) //绝对值
+        console.log(Math.ceil(1.1)) //向上取整
+        console.log(Math.floor(1.9)) //向下取整
+        console.log(Math.round(1.4)) //四舍五入
+        console.log(Math.random()) //随机数 [0,1)
+        console.log(Math.random() * 10) //随机数 [0,10)
+        console.log(Math.floor(Math.random() * (10 + 1))) //随机数 [0,10]
+        console.log(Math.floor(Math.random() * (M - N + 1) + N)) //随机数 [N,M]
+        console.log(Math.pow(2, 3)) //2的3次方
+
+        // 取整函数 parseInt() 和 parseFloat()
+    </script>
+</body>
+
+</html>

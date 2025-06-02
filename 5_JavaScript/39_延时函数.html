@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39_延时函数</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(21, 188, 235);
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            line-height: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>广告</h1>
+    </div>
+    <script>
+        // 只执行一次
+        setTimeout(() => {
+            console.log("时间到了");
+        }, 5000);
+
+        // 5s后关闭广告
+        const div = document.querySelector("div");
+        setTimeout(() => {
+            div.style.display = "none";
+        }, 5000);
+    </script>
+</body>
+
+</html>

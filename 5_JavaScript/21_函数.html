@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21_函数</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 30px;
+            margin: 2px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px pink;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //页面显示多个99乘法表
+        // 1.声明函数 生成99乘法表
+        function sheet99() {
+            for (let i = 1; i <= 9; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(`<span>${j}X${i}=${j * i}</span>`)
+                }
+                document.write("<br>")
+            }
+        }
+        // 2.调用函数
+        sheet99()
+        sheet99()
+        sheet99()
+
+        //计算1-100之间所有数的和
+        // 1.声明一个可以求1-100之间所有数的和的函数
+        // function getSum(end) {
+        //     let sum = 0
+        //     for (let i = 1; i <= end; i++) {
+        //         sum += i
+        //     }
+        //     console.log(sum)
+        // }
+        // // 2.调用函数
+        // getSum(50)//1-50之间所有数的和
+        // getSum(100)//1-100之间所有数的和
+        // 1.声明一个可以求1-100之间所有数的和的函数
+        //括号内的参数是形参，函数声明时传递的参数
+        function getSum(start, end) {
+            let sum = 0
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            console.log(sum)
+        }
+        // 2.调用函数
+        //括号内的参数是实参，调用函数时传递的参数
+        getSum(1, 50)//1-50之间所有数的和
+        getSum(100, 200)//100-200之间所有数的和
+
+        //函数的返回值
+        function fn1() {
+            return 20
+        }
+        // console.log(fn1())
+        let res = fn1()
+        console.log(res)
+        //求和函数的写法
+        function getSum(x, y) {
+            return x + y
+            //return语句后面的代码不会执行，函数执行到return语句就会停止
+        }
+        function fn2() {
+
+        }
+        let sum = getSum(10, 20)
+        console.log(sum)
+        console.log(fn2())//undefined
+
+        //匿名函数
+        // 1.函数表达式
+        let fn3 = function () {
+            console.log("我是函数表达式")
+        }
+        fn3();
+        // 2.自调用函数,函数声明后立即执行,可以避免全局变量污染,多个自调用函数之间用分号隔开
+        (function () {
+            console.log("我是自调用函数")
+        })()
+        //具名函数
+        function fn4() {
+            console.log("我是具名函数")
+        }
+        fn4()
+        //区别：1.具名函数可以重复调用，匿名函数只能调用一次 2.具名函数可以在函数声明之前调用，匿名函数不能
+    </script>
+</body>
+
+</html>

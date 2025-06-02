@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_隐式转换</title>
+</head>
+
+<body>
+    <script>
+        //1.+号两边只要有一个是字符串，都会把另一个转换为字符串
+        //2.除了+号以外的运算符比如- * / 都会把运算符两边的数转换为数字
+        console.log(1 + 1)
+        console.log('pink' + 1)
+        console.log(2 + 2)
+        console.log('2' + 2)
+        console.log(2 - 2)
+        console.log('2' - 2)
+        console.log(+12)
+        console.log(+'123')
+        console.log(typeof +'123')
+    </script>
+</body>
+
+</html>

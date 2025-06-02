@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_循环语句</title>
+</head>
+
+<body>
+    <script>
+        // 1. while循环
+        // while (循环条件) {
+        //     循环体
+        // }
+        //变量的起始值
+        let i = 1
+        //终止条件
+        // while (i <= 10) {
+        //     document.write('月薪过万<br>')
+        //变量的变化量
+        //     i++
+        // }
+        // 2.continue和break退出循环
+        // while (i <= 5) {
+        //     if (i === 3) {
+        //         break // break退出循环
+        //     }
+        //     console.log(`我要吃第${i}个包子`)
+        //     i++
+        // }
+        while (i <= 5) {
+            if (i === 3) {
+                i++
+                continue // continue退出本次循环，继续下一次循环
+            }
+            console.log(`我要吃第${i}个包子`)
+            i++
+        }
+    </script>
+</body>
+
+</html>

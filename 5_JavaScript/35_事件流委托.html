@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35_事件委托</title>
+</head>
+
+<body>
+    <ul>
+        <li>第1个孩子</li>
+        <li>第2个孩子</li>
+        <li>第3个孩子</li>
+        <li>第4个孩子</li>
+        <li>第5个孩子</li>
+        <p>我不需要变色</p>
+    </ul>
+    <script>
+        // 点击 li ，当前 li 文本变红色
+        // 按照事件委托的方式
+        // 1.获得父元素
+        const ul = document.querySelector("ul");
+        ul.addEventListener("click", function (e) {
+            // this.style.color = "red";  // 全部 li 文本变红色
+            // e.target.style.color = "red";  // p 文本也会变红色
+            if (e.target.tagName === "LI") {
+                e.target.style.color = "red";
+            }
+        })
+    </script>
+</body>
+
+</html>
