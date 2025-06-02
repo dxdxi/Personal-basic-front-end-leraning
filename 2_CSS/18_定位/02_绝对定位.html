@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>02_绝对定位</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: chartreuse;
+        }
+        .box2 {
+            background-color: brown;
+            position: absolute;
+            top: 220px;
+            left: 20px;
+        }
+        .box3 {
+            background-color: burlywood;
+        }
+        .outer:hover .box2 {
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

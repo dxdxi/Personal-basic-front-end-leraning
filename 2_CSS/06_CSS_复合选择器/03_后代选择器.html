@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>03_后代选择器</title>
+    <style>
+        ul li {
+            color: aqua;
+        }
+        ol li {
+            color: burlywood;
+        }
+        ul li a {
+            color: aquamarine;
+        }
+        ol li a {
+            color: chartreuse;
+        }
+        .god #datianshi {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>未来公主</li>
+        <li>未来骑士</li>
+        <li>
+            <a href="#">小骑士</a>
+        </li>
+    </ul>
+    <hr>
+    <ol>
+        <li>贝丝</li>
+        <li>第一军团长</li>
+        <li>
+            <a href="#">鸟嘴医生</a>
+        </li>
+    </ol>
+    <hr>
+    <ol class="god">
+        <li id="datianshi">加百列</li>
+        <li>卡麦尔</li>
+        <li>埃莉诺</li>
+        <li>安吉</li>
+    </ol>
+</body>
+</html>

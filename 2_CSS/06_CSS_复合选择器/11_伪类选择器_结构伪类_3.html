@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>11_伪类选择器_结构伪类_3</title>
+    <style>
+        /* div>p:nth-of-type(5) {
+            color: aqua;
+        } */
+        /* 选中div中倒数第n个的儿子元素【按照所有兄弟】（结构1） */
+        /* div>p:nth-last-child(3) {
+            color: aqua;
+        } */
+        /* 选中div中倒数第n个的儿子元素【按照所有同类型的兄弟】（结构1） */
+        /* div>p:nth-last-of-type(2) {
+            color: aqua;
+        } */
+        /* 选中的是没有兄弟的span元素（结构2） */
+        /* span:only-child {
+            color: aqua;
+        } */
+        /* 选中的是没有同类型兄弟的span元素（结构2） */
+        /* span:only-of-type {
+            color: aqua;
+        } */
+        /* 选中的是根元素 */
+        /* :root {
+            background-color: deepskyblue;
+        } */
+        /* 选中的是没有内容的div元素 */
+        div:empty {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <span>加百列</span>
+        <p>未来骑士：98</p>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+        <p>沄：60</p>
+        <p>罗兰茵：34</p>
+        <span>卡麦尔</span>
+    </div> -->
+    <!-- 结构2 -->
+    <!-- <div>
+        <span>卡麦尔</span>
+    </div>
+    <div>
+        <span>加百列</span>
+        <p>未来骑士：98</p>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+        <p>沄：60</p>
+        <p>罗兰茵：34</p>
+    </div> -->
+    <!-- 结构3 -->
+    <div></div>
+</body>
+</html>

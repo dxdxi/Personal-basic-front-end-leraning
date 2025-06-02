@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>06_属性选择器</title>
+    <style>
+        /* 第一种写法：选中具有title属性的元素 */
+        /* [title] {
+            color: aquamarine;
+        } */
+        
+        /* 第一种写法：选中具有title属性,且属性值为qian的元素 */
+        /* [title="qian"] {
+            color: aquamarine;
+        } */
+        
+        /* 第三种写法：选中具有title属性,且属性值以数字1开头的元素 */
+        /* [title^="1"] {
+            color: aquamarine;
+        } */
+        
+        /* 第四种写法：选中具有title属性,且属性值以数字n结尾的元素 */
+        /* [title$="n"] {
+            color: aquamarine;
+        } */
+        /* 第五种写法：选中具有title属性,且属性值包含字母u的元素 */
+        [title*="u"] {
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div title="1qian">前端学习</div>
+    <div title="1duan">前端学习</div>
+    <div title="2xue">前端学习</div>
+    <div title="2xi">前端学习</div>
+</body>
+</html>

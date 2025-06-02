@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>12_伪类选择器_否定伪类</title>
+    <style>
+        /* 选中的是div的儿子元素，但是排除类名为fail的元素 */
+        div>p:not(.fail) {
+            color: aqua;
+        }
+        /* 选中的是div的儿子元素，但是排除第一个儿子p元素 */
+        div>p:not(:first-child) {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>未来骑士：98</p>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+        <p>沄：60</p>
+        <p class="fail">罗兰茵：34</p>
+    </div>
+</body>
+</html>

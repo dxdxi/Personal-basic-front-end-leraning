@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>05_定位的层级</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+        .box1 {
+            background-color: chartreuse;
+        }
+        .box2 {
+            background-color: brown;
+            position: relative;
+            top: -250px;
+            left: 50px;
+            z-index: 50;
+        }
+        .box3 {
+            background-color: burlywood;
+            position: absolute;
+            top: 130px;
+            left: 130px;
+        }
+        .box4 {
+            background-color: orange;
+            position: fixed;
+            top: 200px;
+            left: 200px;
+        }
+        .box5 {
+            background-color: purple;
+            position: fixed;
+            top: 270px;
+            left: 270px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1"><img src="/亚托莉/9.gif" alt=""></div>
+        <div class="box box2"><img src="/亚托莉/5.gif" alt=""></div>
+        <div class="box box3"><img src="/亚托莉/17.gif" alt=""></div>
+        <div class="box box4"><img src="/亚托莉/4.gif" alt=""></div>
+    </div>
+    <div class="box box5"><img src="/亚托莉/3.gif" alt=""></div>
+</body>
+</html>

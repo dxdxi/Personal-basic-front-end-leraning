@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>09_伪类选择器_结构伪类_1</title>
+    <style>
+        /* 选中的是div的第一个儿子p元素【按照所有兄弟计算的】（结构1） */
+        /* div>p:first-child {
+            color: aqua;
+        } */
+        /* 选中的是div的第一个儿子p元素【按照所有兄弟计算的】（结构2） */
+        /* div>p:first-child {
+            color: aqua;
+        } */
+        /* 选中的是div的后代p元素，且p的父级是谁无所谓，但p必须是其父级的第一个儿子【按照所有兄弟计算的】（结构3） */
+        /* div p:first-child {
+            color: aqua;
+        } */
+        /* 选中的是p元素，且p的父级是谁无所谓，但p必须是其父级的第一个儿子【按照所有兄弟计算的】（结构3） */
+        p:first-child {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p>未来骑士：98</p>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+    </div> -->
+    <!-- 结构2 -->
+    <!-- <div>
+        <span>未来骑士：98</span>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+    </div> -->
+    <!-- 结构3 -->
+    <p>AA72</p>
+    <div>
+        <p>加百列</p>
+        <marquee>
+            <p>未来骑士：98</p>
+            <p>银河</p>
+        </marquee>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+    </div>
+</body>
+</html>

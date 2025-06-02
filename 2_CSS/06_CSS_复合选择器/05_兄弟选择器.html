@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>05_兄弟选择器</title>
+    <style>
+        /* 选中div后紧紧相邻的兄弟p元素——相邻兄弟选择器 */
+        /* div+p {
+            color: aqua;
+        } */
+         /* 选中div后所有的兄弟p元素——通用兄弟选择器 */
+         div~p {
+            color: antiquewhite;
+         }
+         li+li {
+            color: brown;
+         }
+    </style>
+</head>
+<body>
+    <div>前端学习</div>
+    <p>前端</p>
+    <p>Java</p>
+    <p>大数据</p>
+    <p>UI</p>
+    <ul>
+        <li>未来骑士</li>
+        <li>未来公主</li>
+        <li>克雷格</li>
+        <li>卡瑞娜</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>04_子代选择器</title>
+    <style>
+        div>a {
+            color: aqua;
+        }
+        div>p>a {
+            color: bisque;
+        }
+        .guang>a {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">克雷格</a>
+        <a href="#">卡瑞娜</a>
+        <a href="#">可可</a>
+        <p>
+            <a href="#">小骑士</a>
+            <div class="guang">
+                <a href="#">梅儿</a>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

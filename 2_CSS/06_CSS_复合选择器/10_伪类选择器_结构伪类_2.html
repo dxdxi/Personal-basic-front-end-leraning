@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>09_伪类选择器_结构伪类_2</title>
+    <style>
+        /* 选中的是div的第一个儿子p元素【按照所有兄弟计算的】（结构1） */
+        /* div>p:first-child {
+             color: aqua;
+        } */
+        /* 选中的是div的最后个儿子p元素【按照所有兄弟计算的】（结构1） */
+        /* div>p:last-child {
+            color: aqua;
+        }  */
+        /* 选中的是div的第n个儿子p元素【按照所有兄弟计算的】（结构1） */
+        /* div>p:nth-child(3) {
+            color: aquamarine;
+        } */
+        /* 选中的是div的第一个儿子p元素【按照所有同类型兄弟计算的】（结构2） */
+        /* div>p:first-of-type {
+            color: aquamarine;
+        } */
+        /* 选中的是div的第n个儿子p元素【按照所有同类型兄弟计算的】（结构2） */
+        div>p:nth-last-of-type(3) {
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p>未来骑士：98</p>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <p>卡瑞娜：77</p>
+        <p>沄：60</p>
+        <p>罗兰茵：34</p>
+    </div> -->
+    <!-- 结构2 -->
+    <div>
+        <span>加百列</span>
+        <p>未来骑士：98</p>
+        <p>未来公主：90</p>
+        <p>克雷格：78</p>
+        <span>美娅</span>
+        <p>卡瑞娜：77</p>
+        <p>沄：60</p>
+        <p>罗兰茵：34</p>
+    </div>
+</body>
+</html>
