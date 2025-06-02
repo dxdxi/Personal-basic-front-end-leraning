@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01_容器与项目</title>
+    <style>
+        body {
+            display: flex;
+        }
+        .outer {
+            width: 600px;
+            height: 600px;
+            background-color: gray;
+            /* 讲该元素变成伸缩容器（开启了flex布局） */
+            display: flex;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .inner3 {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner inner3">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner inner3">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </div>
+    </div>
+</body>
+</html> 

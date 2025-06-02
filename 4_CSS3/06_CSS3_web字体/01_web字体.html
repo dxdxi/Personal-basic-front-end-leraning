@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01_web字体</title>
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url("font1/方正手迹.ttf");
+            /* https://www.iconfont.cn */
+        }
+
+        /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+        @font-face {
+            font-family: "钉钉进步体 Regular";
+            font-weight: 400;
+            src: url("./font2/bm1V3dVjzTgf.woff2") format("woff2"),
+                url("./font2/bm1V3dVjzTgf.woff") format("woff");
+            font-display: swap;
+        }
+        .t1 {
+            font-size: 50px;
+            font-family: "myfont";
+
+        }
+        .t2 {
+            font-size: 50px;
+            font-family: "钉钉进步体 Regular";
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="t1">大海啊你全是水，骏马啊你四条腿，美人啊你有大大的眼睛还有一张嘴！</h1>
+    <h1 class="t2">大海啊你全是水，骏马啊你四条腿，美人啊你有大大的眼睛还有一张嘴！</h1>
+</body>
+
+</html>

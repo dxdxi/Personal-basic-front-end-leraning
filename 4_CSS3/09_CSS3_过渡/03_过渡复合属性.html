@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>03_过渡复合属性</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            transition: 3s all 0.5s linear;
+        }
+        .outer:hover .inner {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

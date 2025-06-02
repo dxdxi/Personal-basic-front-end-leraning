@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>11_flex复合属性</title>
+    <style>
+        .outer {
+            width: 600px;
+            height: 900px;
+            background-color: gray;
+            margin: 0 auto;
+            /* 伸缩盒模型相关属性-start */
+            /* 讲该元素变成伸缩容器（开启了flex布局） */
+            display: flex;
+            /* 调整主轴方向，水平从左到右 （默认）*/
+            flex-direction: row;
+            /* 主轴换行的方式 */
+            /* flex-wrap: wrap; */
+            /* 主轴的对齐方式 （主轴的起始位置）*/
+            justify-content: flex-start;
+            /* 伸缩容器的整体对齐方式 */
+            align-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid black;
+            box-sizing: border-box;
+            /* 可以拉伸 */
+            /* flex-grow: 1; */
+            /* 可以压缩 */
+            /* flex-shrink: 1; */
+            /* 基准长度 */
+            /* flex-basis: 100px; */
+            /* 可以拉伸 可以压缩 基准长度 */
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html> 

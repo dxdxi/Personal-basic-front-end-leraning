@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>05_小案例</title>
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            background-image: url("../../资料/图片/bike.png");
+            margin: 0 auto;
+            margin-top: 100px;
+            animation: bike 1s steps(31) infinite;
+        }
+        @keyframes bike {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 0 -4030px;
+            }
+        }
+        div:hover {
+            animation: bike 1s steps(10) infinite;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

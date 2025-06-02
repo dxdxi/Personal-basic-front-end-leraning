@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷官网</title>
+    <style>
+        * {
+            font-family: Arial;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-image: url(../../资料/flex布局图片/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .page-header {
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-nav {
+            display: flex;
+        }
+        .header-nav li a {
+            color: white;
+            font-size: 20px;
+            border: 1px solid white;
+            border-radius: 8px;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        .page-content {
+            display: flex;
+            height: calc(100vh - 70px);
+        }
+        .content-nav {
+            width: 1000px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .content-nav .item {
+            width: 180px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s linear;
+            cursor: pointer;
+        }
+        .content-nav .item span {
+            font-size: 20px;
+            color: white
+        }
+        .content-nav .item:nth-child(1) {
+            background-color: #595CA8;
+        }
+        .content-nav .item:nth-child(2) {
+            background-color: #FF9D2E;
+        }
+        .content-nav .item:nth-child(3) {
+            background-color: #01A6DE;
+        }
+        .content-nav .item:nth-child(4) {
+            background-color: #015E91;
+        }
+        .content-nav .item:nth-child(5) {
+            background-color: #1DC128;
+        }
+        .content-nav .item:hover {
+            box-shadow: 0 0 20px black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="page-header">
+        <a href="#">
+            <img src="../../资料/flex布局图片/logo.png" alt="">
+        </a>
+        <ul class="header-nav">
+            <li><a href="#">国内校区</a></li>
+            <li><a href="#">缅甸校区</a></li>
+            <li><a href="#">非洲校区</a></li>
+            <li><a href="#">美国校区</a></li>
+        </ul>
+    </header>
+    <!-- 内容 -->
+    <div class="page-content">
+        <div class="content-nav">
+            <div class="item">
+                <img src="../../资料/flex布局图片/item1.png" alt="">
+                <span>我的邮箱</span>
+            </div>
+            <div class="item">
+                <img src="../../资料/flex布局图片/item2.png" alt="">
+                <span>云服务</span>
+            </div>
+            <div class="item">
+                <img src="../../资料/flex布局图片/item3.png" alt="">
+                <span>手机服务</span>
+            </div>
+            <div class="item">
+                <img src="../../资料/flex布局图片/item4.png" alt="">
+                <span>微信服务</span>
+            </div>
+            <div class="item">
+                <img src="../../资料/flex布局图片/item5.png" alt="">
+                <span>在线服务</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

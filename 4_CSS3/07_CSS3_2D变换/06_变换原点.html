@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>06_变换原点</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 通过关键词调整变换原点 */
+            /* transform-origin: left top; */
+            /* 通过具体像素值调整变换原点 */
+            /* transform-origin: 50px 50px; */
+            /* 通过百分比调整变换原点 */
+            /* transform-origin: 25% 25%; */
+            /* 只给一个值 */
+            /* transform-origin: left; */
+            transform-origin: right bottom;
+            /* 对旋转、缩放有影响，对位移没影响 */
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">hello</div>
+    </div>
+</body>
+</html>

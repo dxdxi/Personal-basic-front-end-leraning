@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>03_主轴的换行方式</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: gray;
+            margin: 0 auto;
+            /* 伸缩盒模型相关属性-start */
+            /* 讲该元素变成伸缩容器（开启了flex布局） */
+            display: flex;
+            /* 调整主轴方向，水平从左到右 （默认）*/
+            flex-direction: row;
+            /* 主轴换行的方式 */
+            flex-wrap: wrap;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+        <div class="inner">5</div>
+        <div class="inner">6</div>
+        <div class="inner">7</div>
+        <div class="inner">8</div>
+    </div>
+</body>
+</html> 

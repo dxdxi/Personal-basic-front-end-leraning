@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_字体图标_方式一</title>
+    <style>
+        /* 第一步 */
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./font3/iconfont.woff2') format('woff2'),
+                url('./font3/iconfont.woff') format('woff'),
+                url('./font3/iconfont.ttf') format('truetype');
+        }
+
+        /* 第二步 */
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="iconfont">&#xe64b;</span>
+    <span class="iconfont">&#xe64c;</span>
+    <span class="iconfont">&#xe64e;</span>
+    <span class="iconfont">&#xe651;</span>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>04_过渡_小案例</title>
+    <style>
+        .outer {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .mask {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 300px;
+            font-size: 50px;
+            opacity: 0;
+            transition: 1s linear;
+        }
+        img {
+            transition: 0.5s linear;
+        }
+        .outer:hover .mask {
+            opacity: 0.5;
+        }
+        .outer:hover img
+         {
+            transform: scale(1.2) rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="../../亚托莉/13.gif" alt="">
+        <div class="mask">没钱了！</div>
+    </div>
+</body>
+</html>

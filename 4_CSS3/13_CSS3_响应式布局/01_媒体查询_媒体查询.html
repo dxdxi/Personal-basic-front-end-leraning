@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01_媒体查询_媒体查询</title>
+    <style>
+        h1 {
+            width: 600px;
+            height: 400px;
+            background-image: linear-gradient(30deg,red,yellow,green);
+            margin: 0 auto;
+            text-align: center;
+            font-size: 50px;
+            line-height: 400px;
+            color: white;
+            text-shadow: 0 0 10px black;
+        }
+        /* 只有在打印机或打印预览才应用的属性 */
+        @media print {
+            h1 {
+                background: transparent;
+            }
+        }
+        /* 只有在屏幕上预览才应用的属性 */
+        @media screen {
+            h1 {
+                font-family: "翩翩体-简";
+            }
+        }
+        /* 所有设备应用的属性 */
+        @media all {
+            h1 {
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>媒体查询</h1>
+</body>
+</html>
