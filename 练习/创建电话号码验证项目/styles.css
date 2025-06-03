@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#user-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#results-div {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 20px;
+}
+.valid {
+  color: green;
+}
+.invalid {
+  color: red;
+}
