@@ -1,0 +1,134 @@
+:root {
+  --primary: #1A1A1A;    /* 炭黑色 */
+  --secondary: #8B0000;  /* 血红色 */
+  --bg: #2C3E50;        /* 深灰色 */
+  --text: #ECF0F1;      /* 灰白色 */
+  --accent: #B7410E;    /* 铁锈色 */
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  background-image: url('dungeon-texture.jpg');
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(26, 26, 26, 0.8);
+  padding: 30px;
+  border: 8px solid #444;
+  border-image: linear-gradient(to bottom, #666, #222) 1;
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--secondary), transparent);
+}
+
+h1 {
+  color: var(--secondary);
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.input-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 70%;
+  border: 2px solid var(--secondary);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 1.1rem;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+button {
+  padding: 12px 25px;
+  background: linear-gradient(to bottom, #333, #000);
+  border: 1px solid var(--secondary);
+  color: var(--text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #444, #111);
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.7);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(0,0,0,0.3);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--secondary);
+}
+
+th {
+  background-color: rgba(139, 0, 0, 0.3);
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  font-family: 'Courier New', monospace;
+}
+
+.creature-msg {
+  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 3px solid var(--secondary);
+  position: relative;
+}
+
+.creature-msg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--secondary), transparent);
+}
+
+#creature-name {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(139, 0, 0, 0.7);
+}
+
+.creature-msg p {
+  margin-left: 10px;
+}
